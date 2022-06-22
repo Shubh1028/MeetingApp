@@ -1,0 +1,48 @@
+nav{
+background-color: #eee;
+font-size: 1.2rem;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.menu a{
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+.li-hover,
+.li-hover:hover{
+    background-color: lightgray;
+}
+
+@media (max-width: 770px){
+   .container{
+    width: 100%;
+   }
+   .nav-container{
+    flex-direction: column;
+    align-items:stretch;
+   }
+   .menu{
+    flex-direction: column;
+   }
+   .nav-right-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1em 1em 0;
+   }
+   .header-mobile{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+}
