@@ -1,0 +1,49 @@
+.date-time-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.hour-box{
+    display:flex;
+    margin: 10px 0 0 0;
+}
+.hour-box-number{
+    width: 30px;
+}
+.input-field{
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.hour-box-space{
+    flex-basis: auto;
+    flex-grow: 1;
+    background-color: lightskyblue;
+    height: 50px;
+}
+
+
+
+
+/* .calendar {
+    position: relative;
+}
+
+.calendar-hours {
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: lightskyblue;
+} */
+
+.meeting {
+    position: absolute;
+    background-color: lightgray;
+    opacity: 0.9;
+    left: 50px;
+    right: 5px;
+}
+
+.meeting-1 {
+    top: 60px;
+    height: 50px;
+}
