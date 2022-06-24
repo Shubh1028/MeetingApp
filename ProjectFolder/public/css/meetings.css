@@ -1,5 +1,7 @@
 .nav-filter-add-meeting{
     display: flex;
+    border-bottom: 1px solid grey;
+    border-radius: 3px;
 }
 .filter-meetings{
     border: 1px solid grey;
@@ -8,16 +10,16 @@
     padding: 1rem;
     font-size: 1rem;
     border-radius: 3px;
+    cursor: pointer;
+    color: blue;
 }
 .add-meetings{
-    flex-basis: auto;
-    flex-grow: 1;
     border: 1px solid gray;
-    border-top: none;
-    border-right: none;
+    border-bottom: none;
     padding: 1rem;
     font-size: 1rem;
     border-radius: 3px;
+    cursor: pointer;
 }
 .date-dropdown{
     width: 100%;
@@ -33,3 +35,26 @@
     border-bottom: 0.5px solid gray;
     padding-bottom: 0.75rem;
 }
+.meetings-matching-box{
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.meetings-matching-box span{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.form-descript{
+    color: #ffff;
+    font-size: 0.9rem;
+}
+#new-meetings{
+    display: none;
+}
+#search-for-meetings{
+    display: block;
+}
+/* .meetings-matching-box input{
+    border: none;
+} */

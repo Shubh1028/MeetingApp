@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meetings | MyMeetings</title>
     <link rel="stylesheet" href="./external/normalize.css/normalize.css" />
     <link
@@ -12,67 +12,153 @@
     />
     <link rel="stylesheet" href="./css/utils.css" />
     <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/meetings.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/meetings.css" />
+  </head>
+  <body>
     <nav>
-        <div class="nav-container container">
-          <ul class="list-unstyled menu">
-            <li class="d-lg-none header-mobile">
-              <span>My Meetings</span>
-              <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
-            </li>
-            <li class=" nav-items">
-              <a class="link-plain" href="#">Calender</a>
-            </li>
-            <li class="li-hover nav-items">
-              <a class="link-plain" href="#">Meetings</a>
-            </li>
-            <li class="nav-items">
-              <a class="link-plain" href="#">Teams</a>
-            </li>
-          </ul>
-          <div class="nav-right-content nav-items">
-            <span class="pl-2">Hello <a href="#">shubh410shekhar@gmail.com</a></span>
-            <span><a class="link-plain pl-2" href="#">Logout</a></span>
+      <div class="nav-container container">
+        <ul class="list-unstyled menu">
+          <li class="d-lg-none header-mobile">
+            <span>My Meetings</span>
+            <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+          </li>
+          <li class="nav-items">
+            <a class="link-plain" href="#">Calender</a>
+          </li>
+          <li class="li-hover nav-items">
+            <a class="link-plain" href="#">Meetings</a>
+          </li>
+          <li class="nav-items">
+            <a class="link-plain" href="#">Teams</a>
+          </li>
+        </ul>
+        <div class="nav-right-content nav-items">
+          <span class="pl-2"
+            >Hello <a href="#">shubh410shekhar@gmail.com</a></span
+          >
+          <span><a class="link-plain pl-2" href="#">Logout</a></span>
+        </div>
+      </div>
+    </nav>
+    <main class="container-box">
+      <h1>Meetings</h1>
+      <hr />
+      <div class="nav-filter-add-meeting">
+        <div class="filter-meetings" id="filter-meetings-btn">Filter/Search Meetings</div>
+        <div class="add-meetings" id="add-meetings-btn">Add a Meetings</div>
+      </div>
+      <section id="search-for-meetings">
+        <form class="form-meeting mt-3">
+          <h2>Search For Meetings</h2>
+          <div>
+            <label for="date">Date</label>
           </div>
+          <div class="mt-2">
+            <select class="date-dropdown p-2" id="date">
+              <option>All</option>
+              <option>Past</option>
+              <option>Upcoming</option>
+              <option>Today</option>
+            </select>
+          </div>
+          <br />
+
+          <div>
+            <label for="search">Search For</label>
+          </div>
+          <div class="mt-2">
+            <textarea
+              class="date-dropdown"
+              rows="4"
+              id="search"
+              placeholder="Search using words with describe meetings."
+            ></textarea>
+          </div>
+          <button class="btn btn-primary mt-2">Search</button>
+        </form>
+        <h2>Meetings matching search criteria</h2>
+        <hr />
+
+        <div class="meetings-matching-box">
+          <span class="f-b f-l">12 September 2020</span
+          ><span class="pl-2"> 06:00 - 07:00</span><br />
+          <span>Project Kickoff</span><br />
+          <button class="btn btn-danger">Excuse yourself</button>
+          <hr />
+          <span class="f-b f-m">Attendees</span><br />
+          <span>shubh410shekhar@gmail.com</span><br />
+          <input class="p-2 b-r" type="email" placeholder="Select Member" />
+          <button class="btn btn-primary mt-2">Add</button>
         </div>
-      </nav>
-      <main class="container-box">
-        <h1>Meetings</h1>
-        <hr>
-        <div class="nav-filter-add-meeting">
-            <div class="filter-meetings">Filter/Search Meetings</div>
-            <div class="add-meetings">Add a Meetings</div>
+        <div class="meetings-matching-box">
+          <span class="f-b f-l">12 September 2020</span
+          ><span class="pl-2"> 06:00 - 07:00</span><br />
+          <span>Project Kickoff</span><br />
+          <button class="btn btn-danger">Excuse yourself</button>
+          <hr />
+          <span class="f-b f-m">Attendees</span><br />
+          <span>shubh410shekhar@gmail.com</span><br />
+          <input class="p-2 b-r" type="email" placeholder="Select Member" />
+          <button class="btn btn-primary mt-2">Add</button>
         </div>
-        <section>
-            <form class="form-meeting mt-3">
-                <h2>Search For Meetings</h2>
-                <div>
-                    <label for="date">Date</label>
-                    </div>
-                    <div class="mt-2">
-                    <select class="date-dropdown p-2" id="date">
-                        <option>All</option>
-                    </select>
-                    </div>
-                    <br>
+      </section>
 
-                    <div>
-                        <label for="search">Search For</label>
-                        </div>
-                        <div class="mt-2">
-                        <textarea class="date-dropdown" rows="4" id="search" placeholder="Search using words with describe meetings."></textarea>
-                        </div>
-                        <button class="btn-primary">Search</button>
-            </form>
-        </section>
-        </main>
+      <section id="new-meetings">
+        <form class="form-meeting mt-3">
+          <h2>Add a new meeting</h2>
+          <div>
+            <label for="date">Date</label>
+          </div>
+          <div class="mt-2">
+            <input class="date-dropdown p-2" type="date" id="date" />
+          </div>
+          <br />
+          <div>
+            <label for="s-time">Starting Time</label>
+          </div>
+          <div class="mt-2">
+            <input class="date-dropdown p-2" type="time" id="s-time" />
+          </div>
+          <br />
+          <div>
+            <label for="e-time">Ending Time</label>
+          </div>
+          <div class="mt-2">
+            <input class="date-dropdown p-2" type="time" id="e-time" />
+          </div>
+          <br />
 
+          <div>
+            <label for="description">Description</label>
+          </div>
+          <div class="mt-2">
+            <textarea
+              class="date-dropdown"
+              rows="4"
+              id="description"
+              placeholder="What is agenda of the meeting ?"
+            ></textarea>
+          </div>
+          <br />
+          <div>
+            <label for="email-teamShort"
+              >Email ID's of attendees or team's short</label
+            >
+          </div>
+          <div class="mt-2">
+            <input class="date-dropdown p-2" type="date" id="email-teamShort" />
+          </div>
+          <span class="form-descript"
+            >Seperate email id's/ team short names by commas -team short name
+            always begin with @</span
+          >
+          <br />
+          <button class="btn btn-primary mt-2">Add Meeting</button>
+        </form>
+      </section>
+    </main>
 
-
-
-       
-      <script src="./js/nav.js"></script>
-</body>
+    <script src="./js/nav.js"></script>
+    <script src="./js/meetings.js"></script>
+  </body>
 </html>

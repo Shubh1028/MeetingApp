@@ -7,6 +7,18 @@
   text-decoration: none;
   color: initial;
 }
+.w-full{
+  width: 100%;
+}
+.b-r{
+  border-radius: 4px;
+}
+.f-l{
+  font-size: 1.5rem;
+}
+.f-m{
+  font-size: 1.2rem;
+}
 .mt-2 {
   margin-top: 0.75em;
 }
@@ -26,7 +38,8 @@
 padding-right: 0.75em;
 }
 .p-2{
-  padding: 0.75rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
 }
 .text-right{
     text-align: right;
@@ -42,12 +55,23 @@ padding-right: 0.75em;
 }
 .container-box{
   width: 100%;
-  padding: 0em 1em 1em 1em;
-  box-sizing: border-box;
+  padding: 0em 1em 1em 1em;  box-sizing: border-box;
   /* border: 1px solid black; */
 }
+.btn{
+  border: none;
+  color: #ffff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
 .btn-primary{
-background-color: aqua;
+background-color: rgb(30, 120, 156);
+}
+.f-b{
+  font-weight: bolder;
+}
+.btn-danger{
+  background-color: crimson;
 }
 @media (max-width: 770px){
     .d-lg-none{
