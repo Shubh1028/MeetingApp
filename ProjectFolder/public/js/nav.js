@@ -8,3 +8,4 @@ menuButton.addEventListener( 'click', function() {
         navItems[i].classList.toggle('d-sm-none');
     }
 });
+

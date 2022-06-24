@@ -1,0 +1,37 @@
+.teams-outer-box{
+    display: grid;
+    grid-template-rows: repeat( 3, 310px );
+    grid-template-columns: repeat( 1, auto );
+    grid-auto-rows: 360px;
+    gap: 2em 2em;
+    width: 100%;
+    justify-content: space-between;
+}
+.teams-inner-box{
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.teams-inner-box span{
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    /* border: 2px solid black; */
+    /* line-height: 1rem; */
+}
+.icon-div{
+    position: relative;
+}
+.plus-icon-div{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media ( min-width : 1000px ) {
+    .teams-outer-box{
+        grid-template-rows: repeat( 4, 310px );
+        grid-template-columns: repeat( 3, 30% );
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting App</title>
+    <link rel="stylesheet" href="./external/normalize.css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="./external/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/teams.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container container">
+        <ul class="list-unstyled menu">
+          <li class="d-lg-none header-mobile">
+            <span>My Meetings</span>
+            <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+          </li>
+          <li class="nav-items">
+            <a class="link-plain" href="./calender.html">Calender</a>
+          </li>
+          <li class="nav-items">
+            <a class="link-plain" href="./meetings.html">Meetings</a>
+          </li>
+          <li class="li-hover nav-items">
+            <a class="link-plain" href="./teams.html">Teams</a>
+          </li>
+        </ul>
+        <div class="nav-right-content nav-items">
+          <span class="pl-2"
+            >Hello <a href="#">shubh410shekhar@gmail.com</a></span
+          >
+          <span><a class="link-plain pl-2" href="#">Logout</a></span>
+        </div>
+      </div>
+    </nav>
+    <main class="container-box">
+      <h1>Meetings</h1>
+      <hr />
+      <h3 class="lighter">View and edit teams you are part of</h3>
+      <section class="teams-outer-box">
+        <div class="teams-inner-box">
+            <span class="f-l f-b">Customer acquisition campaign</span><br>
+            <span class="f-m">@customer-acquisition</span><br>
+            <span class="lighter">Teams to come up with strategies to win our customers by FY21</span><br>
+            <button class="btn btn-danger">Excuse Yourself</button>
+            <hr>
+            <span class="f-b pr-1">Members: </span><span>shubh410sekhar@gmil.com,</span><br>
+            <span>shubhsekhar@gmil.com,</span><br>
+            <input class="p-2 b-r" type="email" placeholder="Select Member" />
+            <button class="btn btn-primary mt-2">Add</button>
+
+        </div>
+        <div class="teams-inner-box">
+            <span class="f-l f-b">Customer acquisition campaign</span><br>
+            <span class="f-m">@customer-acquisition</span><br>
+            <span class="lighter">Teams to come up with strategies to win our customers by FY21</span><br>
+            <button class="btn btn-danger">Excuse Yourself</button>
+            <hr>
+            <span class="f-b pr-1">Members: </span><span>shubh410sekhar@gmil.com,</span><br>
+            <span>shubhsekhar@gmil.com,</span><br>
+            <input class="p-2 b-r" type="email" placeholder="Select Member" />
+            <button class="btn btn-primary mt-2">Add</button>
+
+        </div>
+        <div class="teams-inner-box icon-div">
+            <div class="plus-icon-div">
+            <i class="fa-2x fa-solid fa-plus"></i>
+            </div>
+
+        </div>
+      </section>
+    </main>
+    <script src="./js/nav.js"></script>
+  </body>
+</html>
