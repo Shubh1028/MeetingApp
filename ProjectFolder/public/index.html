@@ -11,10 +11,11 @@
       href="./external/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/nav.css" />
   </head>
   <body>
-    <nav>
+    <!-- <nav>
       <div class="nav-container container">
         <ul class="list-unstyled menu">
           <li class="d-lg-none header-mobile">
@@ -22,7 +23,7 @@
             <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
           </li>
           <li class="li-hover nav-items">
-            <a class="link-plain" href="./calender.html">Calender</a>
+            <a class="link-plain" href="/">Calender</a>
           </li>
           <li class="nav-items">
             <a class="link-plain" href="./meetings.html">Meetings</a>
@@ -38,7 +39,39 @@
           <span><a class="link-plain pl-2" href="#">Logout</a></span>
         </div>
       </div>
-    </nav>
+    </nav> -->
+    <main>
+    <form class="form-container">
+      <p>Register It And Schedule Your First Meeting 🧑‍💻</p>
+      <hr>
+      <div class="mb-2 f-b ft-s-1">
+        <label for="name">Name:</label>
+      </div>
+      <div class="mb-3">
+        <input class="w-full p-3" type="text" id="name" placeholder="Enter Your Name"/>
+      </div>
+      <div class="mb-2 f-b ft-s-1">
+        <label for="email">Email:</label>
+      </div>
+      <div class="mb-3">
+        <input class="w-full p-3" type="email" id="email" placeholder="Enter Your Email"/>
+      </div>
+      <div class="mb-2 f-b ft-s-1">
+        <label for="password">Password:</label>
+      </div>
+      <div class="mb-3">
+        <input class="w-full p-3" type="password" id="password" placeholder="Enter Your Password"/>
+      </div>
+      <div class="mb-2 f-b ft-s-1">
+        <label for="cpassword">Confirm Password:</label>
+      </div>
+      <div class="mb-3">
+        <input class="w-full p-3" type="password" id="cpassword" placeholder="Confirm Your Password"/>
+      </div>
+      <button class="btn btn-primary w-full" type="submit">Submit</button>
+
+    </form>
+    </main>
     <script src="./js/nav.js"></script>
   </body>
 </html>

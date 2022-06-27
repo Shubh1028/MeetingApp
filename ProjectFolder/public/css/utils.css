@@ -10,6 +10,7 @@
 
 .w-full{
   width: 100%;
+  box-sizing: border-box;
 }
 .b-r{
   border-radius: 4px;
@@ -49,6 +50,10 @@ padding-right: 0.75em;
 }
 .p-2{
   padding: 0.4rem;
+  box-sizing: border-box;
+}
+.p-3{
+  padding: 0.6rem;
   box-sizing: border-box;
 }
 .text-right{
