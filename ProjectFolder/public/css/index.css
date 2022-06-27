@@ -1,7 +1,6 @@
 .form-container{
     width: 96%;
     margin: 0 auto;
-    /* border: 1px solid grey; */
     padding: 1rem;
     border-radius: 5px;
     box-sizing: border-box;
@@ -35,7 +34,7 @@ body{
 
 @media ( min-width : 770px ){
     .form-container{
-        width: 30%;
+        width: 33%;
         margin-top: 50px;
     }
 }

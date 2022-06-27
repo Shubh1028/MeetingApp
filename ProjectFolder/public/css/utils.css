@@ -8,6 +8,10 @@
   color: initial;
 }
 
+.w-color {
+  color: #ffff;
+}
+
 .w-full{
   width: 100%;
   box-sizing: border-box;
