@@ -92,6 +92,9 @@ background-color: rgb(30, 120, 156);
 .btn-danger{
   background-color: crimson;
 }
+.danger{
+  color:crimson;
+}
 @media (max-width: 770px){
     .d-lg-none{
         display: block;
