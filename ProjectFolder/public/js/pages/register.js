@@ -1,3 +1,8 @@
+import {
+    register
+} from '../services/auth.js';
+
+
 const userName= document.getElementById('name');
 const nameAlert = document.getElementById('name-alert');
 const userEmail = document.getElementById('email');
@@ -86,39 +91,13 @@ const validatePassword = () => {
 };
 
 
-// async function onRegisterFormSubmit( event ) {
-//     event.preventDefault();
-
-//         const errors = {
-//         name: validateName(),
-//         email: validateEmail(),
-//         password: validatePassword(),
-//     };
-
-    
-
-//     const credentials = {
-//         email,
-//         password
-//     };
-
-//     try {
-//         const data = await login( credentials );
-//         if( !errors.name && !errors.email && !errors.password)
-//         window.location = '';
-//     } catch( error ) {
-//         console.log( error.message );
-//     }
-// }
-
-// document.addEventListener( 'DOMContentLoaded', function() {
-//     document.querySelector( '#login-form' ).addEventListener( 'submit', onLoginFormSubmit );
-// });
-
-
-
-document.querySelector( '#register-form' ).addEventListener( 'submit', function( event ) {
+async function onRegisterFormSubmit( event ) {
     event.preventDefault();
+
+    const name = userName.value;
+    const email = userEmail.value;
+    const password = userPassword.value;
+    const confirmPassword = userCpassword.value;
 
     const errors = {
         name: validateName(),
@@ -126,10 +105,28 @@ document.querySelector( '#register-form' ).addEventListener( 'submit', function(
         password: validatePassword(),
     };
 
-    console.log( errors );
+    
+    const details = {
+        name,
+        email,
+        password,
+        confirmPassword
+    };
 
-    if( !errors.name && !errors.email && !errors.password) {
-        this.submit();
+    if( !errors.name && !errors.email && !errors.password){
+    try {
+        await register( details );
+        window.location = './login.html';
+    } catch( error ) {
+        console.log( error.message );
     }
+}
+}
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    document.querySelector( '#register-form' ).addEventListener( 'submit', onRegisterFormSubmit );
 });
+
+
+
 

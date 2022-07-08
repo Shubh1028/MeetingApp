@@ -32,9 +32,50 @@ const logout = () => {
 
 const getToken = () => localStorage.getItem( Config.TOKEN_KEY );
 
+
+
+const register = async ( details ) => {
+    const response = await fetch( `${Config.baseUrl}/api/auth/register`, {
+        method: 'post',
+        body: JSON.stringify( details ),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if( !response.ok ) {
+        const responseText = await response.text();
+        throw new Error( responseText || 'Some error occured' );
+    }
+};
+
+
+const addMeeting = async ( details ) => {
+    const response = await fetch( `${Config.baseUrl}/api/meetings`, {
+        method: 'post',
+        body: JSON.stringify( details ),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${localStorage.getItem(Config.TOKEN_KEY)}`
+        }
+    });
+
+    if( !response.ok ) {
+        const responseText = await response.text();
+        throw new Error( responseText || 'Some error occured' );
+    }
+
+    const data = await response.json();
+
+    return data;
+};
+
+
 export {
     login,
     logout,
-    getToken
+    getToken,
+    register,
+    addMeeting
 }
 

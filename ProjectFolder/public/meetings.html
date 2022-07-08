@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +35,7 @@
         </ul>
         <div class="nav-right-content nav-items">
           <span class="pl-2"
-            >Hello <a href="#">shubh410shekhar@gmail.com</a></span
+            >Hello <a href="#" id="name-local"></a></span
           >
           <span><a class="link-plain pl-2" href="#" id="logout">Logout</a></span>
         </div>
@@ -105,27 +106,108 @@
       </section>
 
       <section id="new-meetings">
-        <form class="form-meeting mt-3">
+        <form class="form-meeting mt-3" id="add-meeting-form">
           <h2>Add a new meeting</h2>
           <div>
-            <label for="date">Date</label>
+            <label for="name">Name</label>
           </div>
           <div class="mt-2">
-            <input class="date-dropdown p-2" type="date" id="date" />
+            <input class="date-dropdown p-2" type="text" id="name" />
+            <span id="name-alert" class="danger"></span>
+          </div>
+          <br />
+          <div>
+            <label for="date2">Date</label>
+          </div>
+          <div class="mt-2">
+            <input class="date-dropdown p-2" type="date" id="date2" />
+            <span id="date-alert" class="danger"></span>
           </div>
           <br />
           <div>
             <label for="s-time">Starting Time</label>
           </div>
           <div class="mt-2">
-            <input class="date-dropdown p-2" type="time" id="s-time" />
+            <!-- <input class="date-dropdown p-2" type="time" id="s-time" /> -->
+            <select name="start-time-hour" id="s-time-hour" class="start-time-hour">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select>
+            <select name="start-time-minute" id="s-time-minute" class="start-time-minute">
+              <option value="00">00</option>
+              <option value="10">10</option>
+              <option value="30">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+            </select>
+            <span id="start-time-alert" class="danger"></span>
           </div>
           <br />
           <div>
             <label for="e-time">Ending Time</label>
           </div>
           <div class="mt-2">
-            <input class="date-dropdown p-2" type="time" id="e-time" />
+            <!-- <input class="date-dropdown p-2" type="time" id="e-time" /> -->
+            <select name="end-time-hour" id="e-time-hour" class="end-time-hour">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select>
+            <select name="end-time-minute" id="e-time-minute" class="end-time-minute">
+              <option value="00">00</option>
+              <option value="10">10</option>
+              <option value="30">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+            </select>
+            <span id="end-time-alert" class="danger"></span>
           </div>
           <br />
 
@@ -139,6 +221,7 @@
               id="description"
               placeholder="What is agenda of the meeting ?"
             ></textarea>
+            <span id="description-alert" class="danger"></span>
           </div>
           <br />
           <div>
@@ -147,19 +230,21 @@
             >
           </div>
           <div class="mt-2">
-            <input class="date-dropdown p-2" type="date" id="email-teamShort" />
+            <input class="date-dropdown p-2" type="email" id="email-teamShort" />
+            <span id="attendees-alert" class="danger"></span>
           </div>
           <span class="form-descript"
             >Seperate email id's/ team short names by commas -team short name
             always begin with @</span
           >
           <br />
-          <button class="btn btn-primary mt-2">Add Meeting</button>
+          <button class="btn btn-primary mt-2" id="submit" type="submit">Add Meeting</button>
         </form>
       </section>
     </main>
 
     <script src="./js/nav.js" type="module"></script>
     <script src="./js/meetings.js" type="module"></script>
+    <script src="./js/pages/add-meetings.js" type="module"></script>
   </body>
 </html>
