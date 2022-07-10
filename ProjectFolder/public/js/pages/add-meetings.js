@@ -92,6 +92,26 @@ async function onAddMeetingFormSubmit( event ) {
      
     const description = descriptionFetch.value;
 
+    let email = attendeesFetch.value;
+    let arr = []
+    let obj = {}
+    let add = '';
+     for(let i = 0;i <email.length; i++) {
+        if(email[i] === ',') {
+            obj = {
+                email: add.trim
+            }
+            arr.push(obj);
+            add = ''
+            continue;
+        }
+        add = add + email[i];
+     }
+     obj = {
+        email: add.trim()
+     }
+     arr.push(obj);
+
     const addMeetingDetails = {
        name,
        date,
@@ -104,11 +124,8 @@ async function onAddMeetingFormSubmit( event ) {
         hours: parseInt(endTimeHour.value),
         minutes: parseInt(endTimeMinute.value)
        },
-       attendees : [
-        {
-            email: attendeesFetch.value
-        }
-       ]
+       attendees : arr
+
     };
 
     console.log(date);

@@ -64,10 +64,30 @@ const addMeeting = async ( details ) => {
         const responseText = await response.text();
         throw new Error( responseText || 'Some error occured' );
     }
-
     const data = await response.json();
-
     return data;
+};
+
+
+
+const fetchMeetings = async ( time, search ) => {
+    const response = await fetch( `${Config.baseUrl}/api/meetings?` + new URLSearchParams({
+        period: time,
+        search: search
+    }), {
+        headers: {
+            'Authorization': `${localStorage.getItem(Config.TOKEN_KEY)}`
+        }
+    });
+    
+    // take care of cases when backend returns an error - we need to throw the error from this function ourselves
+    if( !response.ok ) {
+        const responseText = await response.text(); // get the text error message from the backend
+        throw new Error( responseText || 'Some error occured' );
+    }
+
+    const meetings = await response.json();
+    return meetings;
 };
 
 
@@ -76,6 +96,7 @@ export {
     logout,
     getToken,
     register,
-    addMeeting
+    addMeeting,
+    fetchMeetings
 }
 
