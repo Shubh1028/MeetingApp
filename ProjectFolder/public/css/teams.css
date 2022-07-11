@@ -1,6 +1,6 @@
 .teams-outer-box{
     display: grid;
-    grid-template-rows: repeat( 3, 310px );
+    grid-template-rows: repeat( 3, auto );
     grid-template-columns: repeat( 1, auto );
     grid-auto-rows: 360px;
     gap: 2em 2em;
@@ -31,7 +31,7 @@
 }
 @media ( min-width : 1000px ) {
     .teams-outer-box{
-        grid-template-rows: repeat( 4, 310px );
+        grid-template-rows: repeat( 4, auto );
         grid-template-columns: repeat( 3, 30% );
     }
 }

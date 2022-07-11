@@ -72,6 +72,12 @@ padding-right: 0.75em;
 .lighter{
   color: gray;
 }
+.input-out-n{
+  outline: none;
+}
+.border-gray{
+  border: 1px solid gray;
+}
 .container-box{
   width: 100%;
   padding: 0em 1em 1em 1em;  box-sizing: border-box;

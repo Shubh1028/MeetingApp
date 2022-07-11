@@ -31,7 +31,7 @@ const showMeetings = ( meetings ) => {
             <hr />
             <span class="f-b f-m">Attendees</span><br />
             <span>${eachEmail}</span><br />
-            <input class="p-2 b-r" type="email" placeholder="Select Member" />
+            <input class="p-2 b-r border-gray" type="email" placeholder="Select Member" />
             <button class="btn btn-primary mt-2">Add</button>
           </div>
             `;
@@ -50,7 +50,7 @@ const showMeetings = ( meetings ) => {
 
 const fetchAndShowMeetings = async () => {
     const time = document.getElementById('time').value;
-const search = document.getElementById('search').value;
+    const search = document.getElementById('search').value;
 
     try {
         const meetings = await fetchMeetings( time, search );

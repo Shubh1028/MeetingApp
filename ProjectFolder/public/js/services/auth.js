@@ -80,16 +80,47 @@ const fetchMeetings = async ( time, search ) => {
         }
     });
     
-    // take care of cases when backend returns an error - we need to throw the error from this function ourselves
     if( !response.ok ) {
-        const responseText = await response.text(); // get the text error message from the backend
+        const responseText = await response.text();
         throw new Error( responseText || 'Some error occured' );
     }
-
     const meetings = await response.json();
     return meetings;
 };
 
+
+const addTeam = async ( details ) => {
+    const response = await fetch( `${Config.baseUrl}/api/teams`, {
+        method: 'post',
+        body: JSON.stringify( details ),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${localStorage.getItem(Config.TOKEN_KEY)}`
+        }
+    });
+
+    if( !response.ok ) {
+        const responseText = await response.text();
+        throw new Error( responseText || 'Some error occured' );
+    }
+    const data = await response.json();
+    return data;
+};
+
+const getTeams = async () => {
+    const response = await fetch( `${Config.baseUrl}/api/teams`, {
+        headers: {
+            'Authorization': `${localStorage.getItem(Config.TOKEN_KEY)}`
+        }
+    });
+    
+    if( !response.ok ) {
+        const responseText = await response.text();
+        throw new Error( responseText || 'Some error occured' );
+    }
+    const teams = await response.json();
+    return teams;
+};
 
 export {
     login,
@@ -97,6 +128,8 @@ export {
     getToken,
     register,
     addMeeting,
-    fetchMeetings
+    fetchMeetings,
+    addTeam,
+    getTeams
 }
 
