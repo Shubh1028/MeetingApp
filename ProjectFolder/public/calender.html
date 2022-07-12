@@ -47,15 +47,18 @@
         <hr>
         <div class="date-time-box">
             <div>
-                <span class="ft-s-1">12 September 2020</span><br>
-                <span class="lighter">Saturday</span>
+                <span class="ft-s-1" id="date-show">12 September 2020</span><br>
+                <span class="lighter" id="day-show">Saturday</span>
             </div>
             <div>
-                <input class="input-field" type="date"/>
+                <input id="date-field" class="input-field" type="date" onchange="dateSelect(event)"/>
             </div>
         </div>
 
-        <section style="position:relative">
+        <section  style="position:relative">
+         <div class="hour-box">
+            <span class="pr-2 hour-box-number">0</span> <div class="hour-box-space"></div>
+         </div>
             
              <div class="hour-box">
                 <span class="pr-2 hour-box-number">1</span> <div class="hour-box-space"></div>
@@ -129,39 +132,18 @@
 
 
 
-                <div>
-                    <div class="meeting meeting-1">
+                <div id="show-meetings-container"> 
+                    <!-- <div class="meeting meeting-1">
                         <span>React Js Session</span><br>
                         <span>Time Duration 1hr</span>
                     
-                    </div>
+                    </div> -->
                 </div>
-
-
-
-<!-- position: relative-->
-             <!-- <div class="calendar"> 
-
-                <div class="calendar-hours"></div>
-
-                <div class="calendar-hours"></div>
-                <div class="calendar-hours"></div>
-                <div class="calendar-hours"></div>
-                <div class="calendar-hours"></div>
-                <div class="calendar-hours"></div> -->
-            
-    <!-- position: absolute -->
-                <!-- <div class="meeting meeting-1">
-                </div> 
-                <div class="meeting meeting-2"></div>
-            </div> -->
-
         </section>
-
     </main>
 
 
-    
     <script src="./js/nav.js" type="module"></script>
+    <script src="./js/pages/calender.js"></script>
   </body>
 </html>

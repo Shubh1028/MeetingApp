@@ -35,6 +35,7 @@
     background-color: lightskyblue;
 } */
 
+
 .meeting {
     position: absolute;
     background-color: lightgray;
@@ -43,7 +44,7 @@
     right: 5px;
 }
 
-.meeting-1 {
+/* .meeting-1 {
     top: 60px;
     height: 50px;
-}
+} */
