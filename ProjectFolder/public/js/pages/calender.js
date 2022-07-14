@@ -28,8 +28,7 @@ function calculateCalenderDetails(details) {
       details[i].startTime.hours * 60 + details[i].startTime.minutes;
     console.log(marginTopMeet);
     let heightMeet =
-      60 * (details[i].endTime.hours - details[i].startTime.hours) -  (details[i].endTime.minutes + details[i].startTime.minutes) -
-      10;
+      60 * (details[i].endTime.hours - details[i].startTime.hours) - (details[i].startTime.minutes - details[i].endTime.minutes) - 10;
     console.log(heightMeet);
 
     attendeesEmailList = [];
